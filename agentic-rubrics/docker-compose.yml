@@ -1,0 +1,66 @@
+services:
+  open-devin:
+    build:
+      context: ./apps/open-devin
+    volumes:
+      - ./shared_workspace:/workspace
+    environment:
+      - WORKSPACE_MOUNT_PATH=/opt/workspace_base
+    networks:
+      - agent_network
+    depends_on:
+      - tailscale
+
+  aider:
+    build:
+      context: ./apps/aider
+    volumes:
+      - ./shared_workspace:/workspace
+    environment:
+      - TERM=xterm-256color
+      - AIDER_GUI=${AIDER_GUI:-true}
+      - AIDER_DARK_MODE=${AIDER_DARK_MODE:-true}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    tty: true
+    stdin_open: true
+    command: ["aider", "--model=groq/llama3-70b-8192"]
+    networks:
+      - agent_network
+    depends_on:
+      - tailscale
+    ports:
+      - "8501:8501"
+  tailscale:
+    image: tailscale/tailscale:latest
+    hostname: ts-gateway
+    volumes:
+      - ./tailscale:/var/lib/tailscale
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    environment:
+      - TS_AUTHKEY=${TS_AUTHKEY}
+      - TS_ROUTES=10.0.0.0/8
+      - TS_STATE_DIR=/var/lib/tailscale
+      - TS_EXTRA_ARGS=--accept-dns=true
+    command: tailscaled --verbose=1
+    networks:
+      - agent_network
+    restart: unless-stopped
+  webserver:
+    image: nginx:alpine
+    volumes:
+      - ./shared_workspace:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    network_mode: service:tailscale
+    depends_on:
+      - tailscale
+
+volumes:
+  shared_workspace:
+    driver: local
+
+networks:
+  agent_network:
+    driver: bridge

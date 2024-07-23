@@ -1,0 +1,243 @@
+Overview
+agentic-rubrics/
+┣ .anima/
+┃ ┣ cache/
+┃ ┗ .gitignore
+┣ .turbo/
+┃ ┣ cache/
+┃ ┣ cookies/
+┃ ┗ daemon/
+┣ .vscode/
+┃ ┣ diff/
+┃ ┗ settings.json
+┣ apps/
+┃ ┣ aider/
+┃ ┣ docs/
+┃ ┣ open-devin/
+┃ ┣ tailscale/
+┃ ┗ web/
+┣ packages/
+┃ ┣ eslint-config/
+┃ ┣ shared-config/
+┃ ┣ typescript-config/
+┃ ┗ ui/
+┣ shared_workspace/
+┃ ┗ .aider.chat.history.md
+┣ .env
+┣ .gitignore
+┣ .npmrc
+┣ Mindmap-1.html
+┣ docker-compose.bak.yml
+┣ docker-compose.yml
+┣ harpa-transcripts.json
+┣ package.json
+┣ pnpm-lock.yaml
+┣ pnpm-workspace.yaml
+┣ tree.txt
+┗ turbo.json
+Deeper
+agentic-rubrics/
+┣ .anima/
+┃ ┣ cache/
+┃ ┃ ┗ b5f624e8aa445bb3d6b39e6e69d9a4fd432f014d36bb31a4737b96b4462b17af
+┃ ┗ .gitignore
+┣ .turbo/
+┃ ┣ cache/
+┃ ┃ ┣ 11b07fd809a6f3ef-meta.json
+┃ ┃ ┣ 11b07fd809a6f3ef.tar.zst
+┃ ┃ ┣ 421a63a67fffea49-meta.json
+┃ ┃ ┗ 421a63a67fffea49.tar.zst
+┃ ┣ cookies/
+┃ ┃ ┣ 1.cookie
+┃ ┃ ┣ 2.cookie
+┃ ┃ ┗ 3.cookie
+┃ ┗ daemon/
+┃   ┗ e2982ed4c74ce737-turbo.log.2024-07-23
+┣ .vscode/
+┃ ┣ diff/
+┃ ┃ ┗ vulsCount.txt
+┃ ┗ settings.json
+┣ apps/
+┃ ┣ aider/
+┃ ┃ ┣ Dockerfile
+┃ ┃ ┗ start.sh
+┃ ┣ docs/
+┃ ┃ ┣ .next/
+┃ ┃ ┃ ┣ cache/
+┃ ┃ ┃ ┃ ┣ eslint/
+┃ ┃ ┃ ┃ ┣ swc/
+┃ ┃ ┃ ┃ ┗ webpack/
+┃ ┃ ┃ ┣ server/
+┃ ┃ ┃ ┃ ┣ app/
+┃ ┃ ┃ ┃ ┣ chunks/
+┃ ┃ ┃ ┃ ┣ pages/
+┃ ┃ ┃ ┃ ┣ app-paths-manifest.json
+┃ ┃ ┃ ┃ ┣ font-manifest.json
+┃ ┃ ┃ ┃ ┣ functions-config-manifest.json
+┃ ┃ ┃ ┃ ┣ interception-route-rewrite-manifest.js
+┃ ┃ ┃ ┃ ┣ middleware-build-manifest.js
+┃ ┃ ┃ ┃ ┣ middleware-manifest.json
+┃ ┃ ┃ ┃ ┣ middleware-react-loadable-manifest.js
+┃ ┃ ┃ ┃ ┣ next-font-manifest.js
+┃ ┃ ┃ ┃ ┣ next-font-manifest.json
+┃ ┃ ┃ ┃ ┣ pages-manifest.json
+┃ ┃ ┃ ┃ ┣ server-reference-manifest.js
+┃ ┃ ┃ ┃ ┣ server-reference-manifest.json
+┃ ┃ ┃ ┃ ┗ webpack-runtime.js
+┃ ┃ ┃ ┣ static/
+┃ ┃ ┃ ┃ ┣ UzuamR0FgdGJjg4jejr8h/
+┃ ┃ ┃ ┃ ┣ chunks/
+┃ ┃ ┃ ┃ ┣ css/
+┃ ┃ ┃ ┃ ┗ media/
+┃ ┃ ┃ ┣ types/
+┃ ┃ ┃ ┃ ┣ app/
+┃ ┃ ┃ ┃ ┗ package.json
+┃ ┃ ┃ ┣ BUILD_ID
+┃ ┃ ┃ ┣ app-build-manifest.json
+┃ ┃ ┃ ┣ app-path-routes-manifest.json
+┃ ┃ ┃ ┣ build-manifest.json
+┃ ┃ ┃ ┣ export-marker.json
+┃ ┃ ┃ ┣ images-manifest.json
+┃ ┃ ┃ ┣ next-minimal-server.js.nft.json
+┃ ┃ ┃ ┣ next-server.js.nft.json
+┃ ┃ ┃ ┣ package.json
+┃ ┃ ┃ ┣ prerender-manifest.js
+┃ ┃ ┃ ┣ prerender-manifest.json
+┃ ┃ ┃ ┣ react-loadable-manifest.json
+┃ ┃ ┃ ┣ required-server-files.json
+┃ ┃ ┃ ┣ routes-manifest.json
+┃ ┃ ┃ ┗ trace
+┃ ┃ ┣ .turbo/
+┃ ┃ ┃ ┗ turbo-build.log
+┃ ┃ ┣ app/
+┃ ┃ ┃ ┣ fonts/
+┃ ┃ ┃ ┃ ┣ GeistMonoVF.woff
+┃ ┃ ┃ ┃ ┗ GeistVF.woff
+┃ ┃ ┃ ┣ favicon.ico
+┃ ┃ ┃ ┣ globals.css
+┃ ┃ ┃ ┣ layout.tsx
+┃ ┃ ┃ ┣ page.module.css
+┃ ┃ ┃ ┗ page.tsx
+┃ ┃ ┣ public/
+┃ ┃ ┃ ┣ file-text.svg
+┃ ┃ ┃ ┣ globe.svg
+┃ ┃ ┃ ┣ next.svg
+┃ ┃ ┃ ┣ vercel.svg
+┃ ┃ ┃ ┗ window.svg
+┃ ┃ ┣ .eslintrc.js
+┃ ┃ ┣ .gitignore
+┃ ┃ ┣ next-env.d.ts
+┃ ┃ ┣ next.config.mjs
+┃ ┃ ┣ package.json
+┃ ┃ ┗ tsconfig.json
+┃ ┣ open-devin/
+┃ ┃ ┗ Dockerfile
+┃ ┣ tailscale/
+┃ ┃ ┗ Dockerfile
+┃ ┗ web/
+┃   ┣ .next/
+┃ ┃ ┃ ┣ cache/
+┃ ┃ ┃ ┃ ┣ eslint/
+┃ ┃ ┃ ┃ ┣ swc/
+┃ ┃ ┃ ┃ ┗ webpack/
+┃ ┃ ┃ ┣ server/
+┃ ┃ ┃ ┃ ┣ app/
+┃ ┃ ┃ ┃ ┣ chunks/
+┃ ┃ ┃ ┃ ┣ pages/
+┃ ┃ ┃ ┃ ┣ app-paths-manifest.json
+┃ ┃ ┃ ┃ ┣ font-manifest.json
+┃ ┃ ┃ ┃ ┣ functions-config-manifest.json
+┃ ┃ ┃ ┃ ┣ interception-route-rewrite-manifest.js
+┃ ┃ ┃ ┃ ┣ middleware-build-manifest.js
+┃ ┃ ┃ ┃ ┣ middleware-manifest.json
+┃ ┃ ┃ ┃ ┣ middleware-react-loadable-manifest.js
+┃ ┃ ┃ ┃ ┣ next-font-manifest.js
+┃ ┃ ┃ ┃ ┣ next-font-manifest.json
+┃ ┃ ┃ ┃ ┣ pages-manifest.json
+┃ ┃ ┃ ┃ ┣ server-reference-manifest.js
+┃ ┃ ┃ ┃ ┣ server-reference-manifest.json
+┃ ┃ ┃ ┃ ┗ webpack-runtime.js
+┃ ┃ ┃ ┣ static/
+┃ ┃ ┃ ┃ ┣ SlQ35e2Y8jYnR7Y_Bzjiu/
+┃ ┃ ┃ ┃ ┣ chunks/
+┃ ┃ ┃ ┃ ┣ css/
+┃ ┃ ┃ ┃ ┗ media/
+┃ ┃ ┃ ┣ types/
+┃ ┃ ┃ ┃ ┣ app/
+┃ ┃ ┃ ┃ ┗ package.json
+┃ ┃ ┃ ┣ BUILD_ID
+┃ ┃ ┃ ┣ app-build-manifest.json
+┃ ┃ ┃ ┣ app-path-routes-manifest.json
+┃ ┃ ┃ ┣ build-manifest.json
+┃ ┃ ┃ ┣ export-marker.json
+┃ ┃ ┃ ┣ images-manifest.json
+┃ ┃ ┃ ┣ next-minimal-server.js.nft.json
+┃ ┃ ┃ ┣ next-server.js.nft.json
+┃ ┃ ┃ ┣ package.json
+┃ ┃ ┃ ┣ prerender-manifest.js
+┃ ┃ ┃ ┣ prerender-manifest.json
+┃ ┃ ┃ ┣ react-loadable-manifest.json
+┃ ┃ ┃ ┣ required-server-files.json
+┃ ┃ ┃ ┣ routes-manifest.json
+┃ ┃ ┃ ┗ trace
+┃   ┣ .turbo/
+┃ ┃ ┃ ┗ turbo-build.log
+┃   ┣ app/
+┃ ┃ ┃ ┣ fonts/
+┃ ┃ ┃ ┃ ┣ GeistMonoVF.woff
+┃ ┃ ┃ ┃ ┗ GeistVF.woff
+┃ ┃ ┃ ┣ favicon.ico
+┃ ┃ ┃ ┣ globals.css
+┃ ┃ ┃ ┣ layout.tsx
+┃ ┃ ┃ ┣ page.module.css
+┃ ┃ ┃ ┗ page.tsx
+┃   ┣ public/
+┃ ┃ ┃ ┣ file-text.svg
+┃ ┃ ┃ ┣ globe.svg
+┃ ┃ ┃ ┣ next.svg
+┃ ┃ ┃ ┣ vercel.svg
+┃ ┃ ┃ ┗ window.svg
+┃   ┣ .eslintrc.js
+┃   ┣ .gitignore
+┃   ┣ next-env.d.ts
+┃   ┣ next.config.mjs
+┃   ┣ package.json
+┃   ┗ tsconfig.json
+┣ packages/
+┃ ┣ eslint-config/
+┃ ┃ ┣ library.js
+┃ ┃ ┣ next.js
+┃ ┃ ┣ package.json
+┃ ┃ ┗ react-internal.js
+┃ ┣ shared-config/
+┃ ┣ typescript-config/
+┃ ┃ ┣ base.json
+┃ ┃ ┣ nextjs.json
+┃ ┃ ┣ package.json
+┃ ┃ ┗ react-library.json
+┃ ┗ ui/
+┃   ┣ src/
+┃ ┃ ┃ ┣ button.tsx
+┃ ┃ ┃ ┣ card.tsx
+┃ ┃ ┃ ┗ code.tsx
+┃   ┣ turbo/
+┃ ┃ ┃ ┗ generators/
+┃ ┃ ┃   ┣ templates/
+┃ ┃ ┃   ┗ config.ts
+┃   ┣ .eslintrc.js
+┃   ┣ package.json
+┃   ┣ tsconfig.json
+┃   ┗ tsconfig.lint.json
+┣ shared_workspace/
+┃ ┗ .aider.chat.history.md
+┣ .env
+┣ .gitignore
+┣ .npmrc
+┣ Mindmap-1.html
+┣ docker-compose.bak.yml
+┣ docker-compose.yml
+┣ harpa-transcripts.json
+┣ package.json
+┣ pnpm-lock.yaml
+┣ pnpm-workspace.yaml
+┗ turbo.json
