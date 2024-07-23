@@ -1,11 +1,15 @@
 <!-- SECTION - Heading -->
+
 # A Turborepo of Experiments
 
------------------------------------------------------------------------
+---
+
 <!-- SECTION - Title -->
+
 ## **Learning and Experimenting with Technology**
 
 <!-- ANCHOR - Experiment Category -->
+
 ### Software Engineering Agents
 
 #### Query: Can two AI agents collaborate on code?
@@ -47,7 +51,7 @@ Testing OpenDevin and Aider and how they might collaborate
 
 ##### Evaluate Ability for Agentic Collaboration
 
-     - Can Aider and OpenDevin haromoniously plan, design and execute a functional web app?
+    - Can Aider and OpenDevin haromoniously plan, design and execute a functional web app?
      - Will they have awareness of each other in the sense that they are influenced?
      - Can they ingest the other into context?
      - Will they have awareness of the environment?
@@ -61,14 +65,55 @@ Starting from blank code base
 - Start containers
 - Enable networking between container
 - Mount volumes to containers for Agent access to filesystem
-
 - **Agentic Birth**
 - Establish Plan
 - Initialize turborepo
 - Initalize git
 - begin building
 
+Notes
+
+- created containers, docker compose yaml for services
+- configuring tailscale
+- used Harpa with Claude to extract from youtube video by tailscale
+-
+
+Summary:
+Alex from Tailscale provides a quick-start guide for using Docker with Tailscale. He demonstrates how to install Docker on a fresh Ubuntu server, create a Tailscale container, and connect it to a Tailnet. The video covers deploying multiple applications (Nginx and Sterling PDF) using Docker Compose, securing them with Tailscale, and setting up HTTPS certificates using Tailscale Serve. Alex emphasizes the simplicity of connecting containers to a Tailnet and accessing them from anywhere, regardless of network topology.
+
+Step-by-step instructions:
+
+1. Install Docker:
+   a. Run the get.docker.com script
+   b. Execute: sudo sh install-docker.sh
+   c. Add user to Docker group: usermod -aG docker `<username>`
+   d. Log out and log back in
+   e. Verify installation: docker run --rm hello-world
+2. Create first Tailscale container:
+   a. Create a Docker Compose YAML file
+   b. Add Tailscale and Nginx services to the file
+   c. Generate an auth key from Tailscale admin dashboard
+   d. Add the auth key to the Docker Compose file
+   e. Run: docker compose up -d
+3. Deploy additional applications (e.g., Sterling PDF):
+   a. Add Sterling PDF service to Docker Compose file
+   b. Generate OAuth client credentials in Tailscale admin console
+   c. Add OAuth client secret to Docker Compose file
+   d. Set up necessary volumes and network configurations
+   e. Run: docker compose up -d
+4. Set up HTTPS certificates with Tailscale Serve:
+   a. Enable HTTPS certificates in Tailscale admin console
+   b. Create a JSON configuration file for Tailscale Serve
+   c. Add TS_Serve_Config to Docker Compose file
+   d. Restart containers: docker compose up -d
+   e. Verify HTTPS setup using docker exec command
+5. Access your containerized services:
+   a. Use Tailscale DNS names or assigned hostnames
+   b. Access services securely over HTTPS
+
+
 <!-- ----------------------------------------------------------------------- -->
+
 <!-- TODO - Find the rest of my AI Agents and tools and categorize them -->
 
 <!-- ### Agents

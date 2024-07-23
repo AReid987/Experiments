@@ -3,5 +3,6 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  "WhiteSource Advise.Diff.BaseBranch": "main"
 }
