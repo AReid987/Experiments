@@ -6,13 +6,13 @@
 
 <!-- SECTION - Title -->
 
-## **Learning and Experimenting with Technology**
+## **Currently Testing**
 
 <!-- ANCHOR - Experiment Category -->
 
 ### Software Engineering Agents
 
-#### Query: Can two AI agents collaborate on code?
+#### Query: Can AI Software Engineer Agents collaborate to create function code?
 
 Testing OpenDevin and Aider and how they might collaborate
 
@@ -24,9 +24,9 @@ Testing OpenDevin and Aider and how they might collaborate
             - OpenDevin
             - Aider
             - Tailscale for networking
-            - TBD
+            - Nginx web server
     - Tailscale
-        - Intra cluster communication
+        - Intra Node comms
         - Remote access
         - VPN, VPC, VPS
 
@@ -60,23 +60,78 @@ Testing OpenDevin and Aider and how they might collaborate
 
 Starting from blank code base
 
-- **Human interaction**
+
+##### **Human interaction**
+
+- Init git repo
+- Init Turborepo
 - Containerize Agents
 - Start containers
 - Enable networking between container
 - Mount volumes to containers for Agent access to filesystem
+
 - **Agentic Birth**
-- Establish Plan
-- Initialize turborepo
-- Initalize git
-- begin building
+
+  - Establish Plan
+  - begin building
+
+##### Project Structure
+
+```
+agentic-rubrics/
+┣ .anima/
+┃ ┣ cache/
+┃ ┗ .gitignore
+┣ .turbo/
+┃ ┣ cache/
+┃ ┣ cookies/
+┃ ┗ daemon/
+┣ .vscode/
+┃ ┣ diff/
+┃ ┗ settings.json
+┣ AgenticPlanning/
+┃ ┗ harpa-transcripts.json
+┣ apps/
+┃ ┣ aider/
+┃ ┣ docs/
+┃ ┣ open-devin/
+┃ ┣ tailscale/
+┃ ┗ web/
+┣ packages/
+┃ ┣ eslint-config/
+┃ ┣ shared-config/
+┃ ┣ typescript-config/
+┃ ┗ ui/
+┣ shared_workspace/
+┃ ┣ .aider.chat.history.md
+┃ ┗ aider
+┣ tailscale/
+┃ ┣ files/
+┃ ┣ derpmap.cached.json
+┃ ┣ tailscaled.log.conf
+┃ ┣ tailscaled.log1.txt
+┃ ┣ tailscaled.log2.txt
+┃ ┗ tailscaled.state
+┣ .env
+┣ .gitignore
+┣ .npmrc
+┣ Mindmap-1.html
+┣ docker-compose.bak.yml
+┣ docker-compose.yml
+┣ nginx.conf
+┣ package.json
+┣ pnpm-lock.yaml
+┣ pnpm-workspace.yaml
+┣ tree.txt
+┗ turbo.json
+```
+
 
 Notes
 
 - created containers, docker compose yaml for services
 - configuring tailscale
 - used Harpa with Claude to extract from youtube video by tailscale
--
 
 Summary:
 Alex from Tailscale provides a quick-start guide for using Docker with Tailscale. He demonstrates how to install Docker on a fresh Ubuntu server, create a Tailscale container, and connect it to a Tailnet. The video covers deploying multiple applications (Nginx and Sterling PDF) using Docker Compose, securing them with Tailscale, and setting up HTTPS certificates using Tailscale Serve. Alex emphasizes the simplicity of connecting containers to a Tailnet and accessing them from anywhere, regardless of network topology.
@@ -110,7 +165,6 @@ Step-by-step instructions:
 5. Access your containerized services:
    a. Use Tailscale DNS names or assigned hostnames
    b. Access services securely over HTTPS
-
 
 <!-- ----------------------------------------------------------------------- -->
 

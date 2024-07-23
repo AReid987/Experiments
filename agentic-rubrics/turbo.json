@@ -24,6 +24,9 @@
         },
         "docker:down": {
             "cache": false
+        },
+        "map": {
+            "cache": false
         }
     }
 }

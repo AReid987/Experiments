@@ -4,6 +4,7 @@
     "scripts": {
         "build": "turbo build",
         "dev": "turbo dev",
+        "map": "npx appmap-node pnpm dev",
         "lint": "turbo lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
         "docker:build": "turbo docker:build",
@@ -11,6 +12,7 @@
         "docker:down": "turbo docker:down"
     },
     "devDependencies": {
+        "appmap-node": "^2.23.1",
         "prettier": "^3.2.5",
         "turbo": "^2.0.9",
         "typescript": "^5.4.5"
