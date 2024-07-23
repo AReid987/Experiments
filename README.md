@@ -2,9 +2,33 @@
 
 # A Turborepo of Experiments
 
+## Quickstart
+
+agentic-rubrics is the turborepo for the current test
+`cd agentic-rubrics`
+
+Buld the local turborepo
+
+`pnpm build`
+
+Run with turbopack
+
+`pnpm dev`
+
+To start the docker containters
+
+`docker compose build`
+
+`docker compose --verbose up `
+
+#### Issues
+
+Open Devin has a permissions error yet to be investigated
+
+Aider has a git permissions issue currently working on.
+
 ---
 
-<!-- SECTION - Title -->
 
 ## **Currently Testing**
 
